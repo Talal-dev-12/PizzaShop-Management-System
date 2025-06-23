@@ -42,57 +42,60 @@ namespace pizza
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(220, 24);
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 0);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(87, 29);
+            label1.Size = new Size(556, 73);
             label1.TabIndex = 0;
             label1.Text = "LOGIN";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(149, 67);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(130, 98);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(60, 15);
+            label2.Size = new Size(88, 21);
             label2.TabIndex = 1;
-            label2.Text = "Username";
+            label2.Text = "Username :";
             // 
             // txtpassword
             // 
             txtpassword.AutoSize = true;
-            txtpassword.Location = new Point(149, 104);
+            txtpassword.Font = new Font("Segoe UI", 12F);
+            txtpassword.Location = new Point(131, 137);
             txtpassword.Margin = new Padding(2, 0, 2, 0);
             txtpassword.Name = "txtpassword";
-            txtpassword.Size = new Size(57, 15);
+            txtpassword.Size = new Size(83, 21);
             txtpassword.TabIndex = 2;
-            txtpassword.Text = "Password";
+            txtpassword.Text = "Password :";
             // 
             // txtusername
             // 
-            txtusername.Location = new Point(256, 65);
-            txtusername.Margin = new Padding(2, 2, 2, 2);
+            txtusername.Location = new Point(232, 100);
+            txtusername.Margin = new Padding(2);
             txtusername.Name = "txtusername";
             txtusername.Size = new Size(166, 23);
             txtusername.TabIndex = 3;
             // 
             // txtpass
             // 
-            txtpass.Location = new Point(256, 103);
-            txtpass.Margin = new Padding(2, 2, 2, 2);
+            txtpass.Location = new Point(232, 138);
+            txtpass.Margin = new Padding(2);
             txtpass.Name = "txtpass";
             txtpass.Size = new Size(166, 23);
             txtpass.TabIndex = 4;
             // 
             // btnlogin
             // 
-            btnlogin.Location = new Point(256, 174);
-            btnlogin.Margin = new Padding(2, 2, 2, 2);
+            btnlogin.Location = new Point(245, 193);
+            btnlogin.Margin = new Padding(2);
             btnlogin.Name = "btnlogin";
-            btnlogin.Size = new Size(78, 31);
+            btnlogin.Size = new Size(97, 31);
             btnlogin.TabIndex = 5;
             btnlogin.Text = "Login";
             btnlogin.UseVisualStyleBackColor = true;
@@ -100,10 +103,10 @@ namespace pizza
             // 
             // btnexit
             // 
-            btnexit.Location = new Point(449, 236);
-            btnexit.Margin = new Padding(2, 2, 2, 2);
+            btnexit.Location = new Point(479, 276);
+            btnexit.Margin = new Padding(2);
             btnexit.Name = "btnexit";
-            btnexit.Size = new Size(78, 38);
+            btnexit.Size = new Size(66, 27);
             btnexit.TabIndex = 6;
             btnexit.Text = "Exit";
             btnexit.UseVisualStyleBackColor = true;
@@ -111,10 +114,12 @@ namespace pizza
             // 
             // chkShowPassword
             // 
-            chkShowPassword.Location = new Point(256, 137);
-            chkShowPassword.Margin = new Padding(2, 2, 2, 2);
+            chkShowPassword.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkShowPassword.ForeColor = Color.Blue;
+            chkShowPassword.Location = new Point(289, 165);
+            chkShowPassword.Margin = new Padding(2);
             chkShowPassword.Name = "chkShowPassword";
-            chkShowPassword.Size = new Size(164, 24);
+            chkShowPassword.Size = new Size(109, 24);
             chkShowPassword.TabIndex = 7;
             chkShowPassword.Text = "Show Password";
             chkShowPassword.UseVisualStyleBackColor = true;
@@ -124,7 +129,7 @@ namespace pizza
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(538, 285);
+            ClientSize = new Size(556, 314);
             Controls.Add(chkShowPassword);
             Controls.Add(btnexit);
             Controls.Add(btnlogin);
@@ -133,8 +138,10 @@ namespace pizza
             Controls.Add(txtpassword);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load;
             ResumeLayout(false);

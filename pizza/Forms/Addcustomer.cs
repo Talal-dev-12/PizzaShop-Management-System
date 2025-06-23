@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using pizza.Database;
+using DocumentFormat.OpenXml.Bibliography;
 
 namespace pizza.Forms
 {
@@ -312,13 +313,6 @@ namespace pizza.Forms
 
                 MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-
-
-        private void Addcustomer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

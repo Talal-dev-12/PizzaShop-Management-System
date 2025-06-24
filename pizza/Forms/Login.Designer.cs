@@ -30,7 +30,6 @@ namespace pizza
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             txtpassword = new Label();
             txtusername = new TextBox();
@@ -38,19 +37,8 @@ namespace pizza
             btnlogin = new Button();
             btnexit = new Button();
             chkShowPassword = new CheckBox();
+            label3 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(556, 73);
-            label1.TabIndex = 0;
-            label1.Text = "LOGIN";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -125,11 +113,25 @@ namespace pizza
             chkShowPassword.UseVisualStyleBackColor = true;
             chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
+            // label3
+            // 
+            label3.BackColor = SystemColors.ActiveBorder;
+            label3.Dock = DockStyle.Top;
+            label3.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(0, 0);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(556, 65);
+            label3.TabIndex = 39;
+            label3.Text = "LOGIN";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(556, 314);
+            Controls.Add(label3);
             Controls.Add(chkShowPassword);
             Controls.Add(btnexit);
             Controls.Add(btnlogin);
@@ -137,7 +139,6 @@ namespace pizza
             Controls.Add(txtusername);
             Controls.Add(txtpassword);
             Controls.Add(label2);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Login";
@@ -149,8 +150,6 @@ namespace pizza
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label txtpassword;
         private TextBox txtusername;
@@ -158,5 +157,6 @@ namespace pizza
         private Button btnlogin;
         private Button btnexit;
         private CheckBox chkShowPassword;
+        private Label label3;
     }
 }

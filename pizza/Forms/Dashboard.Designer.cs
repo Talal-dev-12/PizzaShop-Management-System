@@ -59,7 +59,7 @@
             // 
             // btnaddcustomer
             // 
-            btnaddcustomer.Location = new Point(29, 15);
+            btnaddcustomer.Location = new Point(11, 16);
             btnaddcustomer.Margin = new Padding(2);
             btnaddcustomer.Name = "btnaddcustomer";
             btnaddcustomer.Size = new Size(135, 26);
@@ -70,7 +70,7 @@
             // 
             // btnupdatecustomer
             // 
-            btnupdatecustomer.Location = new Point(29, 45);
+            btnupdatecustomer.Location = new Point(11, 46);
             btnupdatecustomer.Margin = new Padding(2);
             btnupdatecustomer.Name = "btnupdatecustomer";
             btnupdatecustomer.Size = new Size(135, 26);
@@ -81,7 +81,7 @@
             // 
             // btndeletecustomer
             // 
-            btndeletecustomer.Location = new Point(29, 75);
+            btndeletecustomer.Location = new Point(11, 76);
             btndeletecustomer.Margin = new Padding(2);
             btndeletecustomer.Name = "btndeletecustomer";
             btndeletecustomer.Size = new Size(135, 26);
@@ -92,7 +92,7 @@
             // 
             // btndisplaydata
             // 
-            btndisplaydata.Location = new Point(29, 135);
+            btndisplaydata.Location = new Point(11, 136);
             btndisplaydata.Margin = new Padding(2);
             btndisplaydata.Name = "btndisplaydata";
             btndisplaydata.Size = new Size(135, 26);
@@ -103,7 +103,7 @@
             // 
             // btnexit
             // 
-            btnexit.Location = new Point(29, 348);
+            btnexit.Location = new Point(11, 348);
             btnexit.Margin = new Padding(2);
             btnexit.Name = "btnexit";
             btnexit.Size = new Size(135, 26);
@@ -130,7 +130,7 @@
             // 
             // btnDisplayInventory
             // 
-            btnDisplayInventory.Location = new Point(29, 195);
+            btnDisplayInventory.Location = new Point(11, 196);
             btnDisplayInventory.Margin = new Padding(2);
             btnDisplayInventory.Name = "btnDisplayInventory";
             btnDisplayInventory.Size = new Size(135, 26);
@@ -141,7 +141,7 @@
             // 
             // btnInventory
             // 
-            btnInventory.Location = new Point(29, 165);
+            btnInventory.Location = new Point(11, 166);
             btnInventory.Margin = new Padding(2);
             btnInventory.Name = "btnInventory";
             btnInventory.Size = new Size(135, 26);

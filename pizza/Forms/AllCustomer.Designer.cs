@@ -40,6 +40,9 @@
             dataGridView1 = new DataGridView();
             lblTotalOrders = new Label();
             lblTotalSales = new Label();
+            btnDelete = new Button();
+            label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -148,28 +151,60 @@
             // 
             lblTotalOrders.AutoSize = true;
             lblTotalOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            lblTotalOrders.Location = new Point(21, 453);
+            lblTotalOrders.Location = new Point(126, 456);
             lblTotalOrders.Name = "lblTotalOrders";
-            lblTotalOrders.Size = new Size(131, 21);
+            lblTotalOrders.Size = new Size(30, 21);
             lblTotalOrders.TabIndex = 41;
-            lblTotalOrders.Text = "Total Orders : XX";
+            lblTotalOrders.Text = "XX";
             lblTotalOrders.Click += lblTotalOrders_Click;
             // 
             // lblTotalSales
             // 
             lblTotalSales.AutoSize = true;
             lblTotalSales.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            lblTotalSales.Location = new Point(21, 488);
+            lblTotalSales.Location = new Point(126, 490);
             lblTotalSales.Name = "lblTotalSales";
-            lblTotalSales.Size = new Size(165, 21);
+            lblTotalSales.Size = new Size(73, 21);
             lblTotalSales.TabIndex = 41;
-            lblTotalSales.Text = "Total Sales :  PKR XXX";
+            lblTotalSales.Text = "PKR XXX";
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(625, 112);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(86, 28);
+            btnDelete.TabIndex = 45;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label4.Location = new Point(13, 456);
+            label4.Name = "label4";
+            label4.Size = new Size(107, 21);
+            label4.TabIndex = 41;
+            label4.Text = "Total Orders :";
+            label4.Click += lblTotalOrders_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label5.Location = new Point(12, 490);
+            label5.Name = "label5";
+            label5.Size = new Size(94, 21);
+            label5.TabIndex = 41;
+            label5.Text = "Total Sales :";
             // 
             // Deletecustomer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1151, 529);
+            Controls.Add(btnDelete);
             Controls.Add(dataGridView1);
             Controls.Add(btnClose);
             Controls.Add(btnExportToExcel);
@@ -177,14 +212,17 @@
             Controls.Add(btnFilter);
             Controls.Add(dtpTo);
             Controls.Add(dtpFrom);
+            Controls.Add(label5);
             Controls.Add(lblTotalSales);
             Controls.Add(label3);
+            Controls.Add(label4);
             Controls.Add(lblTotalOrders);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Deletecustomer";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Deletecustomer";
             Load += Deletecustomer_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -205,5 +243,8 @@
         private DataGridView dataGridView1;
         private Label lblTotalOrders;
         private Label lblTotalSales;
+        private Button btnDelete;
+        private Label label4;
+        private Label label5;
     }
 }

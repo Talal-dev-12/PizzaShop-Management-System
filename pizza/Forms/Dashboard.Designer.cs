@@ -37,7 +37,7 @@
             btnexit = new Button();
             panel1 = new Panel();
             btnDisplayInventory = new Button();
-            btnInventory = new Button();
+            BtnInventory = new Button();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -50,19 +50,19 @@
             label1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1044, 68);
+            label1.Size = new Size(1939, 145);
             label1.TabIndex = 0;
             label1.Text = "DASHBOARD";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnaddcustomer
             // 
-            btnaddcustomer.Location = new Point(11, 16);
-            btnaddcustomer.Margin = new Padding(2);
+            btnaddcustomer.Location = new Point(20, 34);
+            btnaddcustomer.Margin = new Padding(4);
             btnaddcustomer.Name = "btnaddcustomer";
-            btnaddcustomer.Size = new Size(135, 26);
+            btnaddcustomer.Size = new Size(251, 55);
             btnaddcustomer.TabIndex = 2;
             btnaddcustomer.Text = "Add Customer";
             btnaddcustomer.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // 
             // btnupdatecustomer
             // 
-            btnupdatecustomer.Location = new Point(11, 46);
-            btnupdatecustomer.Margin = new Padding(2);
+            btnupdatecustomer.Location = new Point(20, 98);
+            btnupdatecustomer.Margin = new Padding(4);
             btnupdatecustomer.Name = "btnupdatecustomer";
-            btnupdatecustomer.Size = new Size(135, 26);
+            btnupdatecustomer.Size = new Size(251, 55);
             btnupdatecustomer.TabIndex = 3;
             btnupdatecustomer.Text = "Update Customer";
             btnupdatecustomer.UseVisualStyleBackColor = true;
@@ -81,32 +81,31 @@
             // 
             // btndeletecustomer
             // 
-            btndeletecustomer.Location = new Point(11, 76);
-            btndeletecustomer.Margin = new Padding(2);
+            btndeletecustomer.Location = new Point(20, 226);
+            btndeletecustomer.Margin = new Padding(4);
             btndeletecustomer.Name = "btndeletecustomer";
-            btndeletecustomer.Size = new Size(135, 26);
+            btndeletecustomer.Size = new Size(251, 55);
             btndeletecustomer.TabIndex = 4;
-            btndeletecustomer.Text = "All Customer Data";
+            btndeletecustomer.Text = "All Customer";
             btndeletecustomer.UseVisualStyleBackColor = true;
             btndeletecustomer.Click += btndeletecustomer_Click;
             // 
             // btndisplaydata
             // 
-            btndisplaydata.Location = new Point(11, 136);
-            btndisplaydata.Margin = new Padding(2);
+            btndisplaydata.Location = new Point(20, 162);
+            btndisplaydata.Margin = new Padding(4);
             btndisplaydata.Name = "btndisplaydata";
-            btndisplaydata.Size = new Size(135, 26);
+            btndisplaydata.Size = new Size(251, 55);
             btndisplaydata.TabIndex = 6;
-            btndisplaydata.Text = "Active Customer Data";
+            btndisplaydata.Text = "Active Customer";
             btndisplaydata.UseVisualStyleBackColor = true;
-            btndisplaydata.Click += btndisplaydata_Click;
             // 
             // btnexit
             // 
-            btnexit.Location = new Point(11, 348);
-            btnexit.Margin = new Padding(2);
+            btnexit.Location = new Point(20, 742);
+            btnexit.Margin = new Padding(4);
             btnexit.Name = "btnexit";
-            btnexit.Size = new Size(135, 26);
+            btnexit.Size = new Size(251, 55);
             btnexit.TabIndex = 8;
             btnexit.Text = "Exit";
             btnexit.UseVisualStyleBackColor = true;
@@ -118,59 +117,61 @@
             panel1.Controls.Add(btnexit);
             panel1.Controls.Add(btnaddcustomer);
             panel1.Controls.Add(btnDisplayInventory);
-            panel1.Controls.Add(btnInventory);
+            panel1.Controls.Add(BtnInventory);
             panel1.Controls.Add(btndisplaydata);
             panel1.Controls.Add(btnupdatecustomer);
             panel1.Controls.Add(btndeletecustomer);
             panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 68);
+            panel1.Location = new Point(0, 145);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(169, 385);
+            panel1.Size = new Size(314, 821);
             panel1.TabIndex = 9;
             // 
             // btnDisplayInventory
             // 
-            btnDisplayInventory.Location = new Point(11, 196);
-            btnDisplayInventory.Margin = new Padding(2);
+            btnDisplayInventory.Location = new Point(20, 353);
+            btnDisplayInventory.Margin = new Padding(4);
             btnDisplayInventory.Name = "btnDisplayInventory";
-            btnDisplayInventory.Size = new Size(135, 26);
+            btnDisplayInventory.Size = new Size(251, 55);
             btnDisplayInventory.TabIndex = 6;
             btnDisplayInventory.Text = "DISPLAY INVENTORY";
             btnDisplayInventory.UseVisualStyleBackColor = true;
-            btnDisplayInventory.Click += btndisplaydata_Click;
+            btnDisplayInventory.Click += btnDisplayInventory_Click;
             // 
-            // btnInventory
+            // BtnInventory
             // 
-            btnInventory.Location = new Point(11, 166);
-            btnInventory.Margin = new Padding(2);
-            btnInventory.Name = "btnInventory";
-            btnInventory.Size = new Size(135, 26);
-            btnInventory.TabIndex = 6;
-            btnInventory.Text = "ADD INVENTORY";
-            btnInventory.UseVisualStyleBackColor = true;
-            btnInventory.Click += btndisplaydata_Click;
+            BtnInventory.Location = new Point(20, 289);
+            BtnInventory.Margin = new Padding(4);
+            BtnInventory.Name = "BtnInventory";
+            BtnInventory.Size = new Size(251, 55);
+            BtnInventory.TabIndex = 6;
+            BtnInventory.Text = "ADD INVENTORY";
+            BtnInventory.UseVisualStyleBackColor = true;
+            BtnInventory.Click += BtnInventory_Click_1;
             // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(169, 68);
+            pictureBox1.Location = new Point(314, 145);
+            pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(875, 385);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Size = new Size(1625, 821);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1044, 453);
+            ClientSize = new Size(1939, 966);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2);
+            Margin = new Padding(4);
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
@@ -190,6 +191,6 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Button btnDisplayInventory;
-        private Button btnInventory;
+        private Button BtnInventory;
     }
 }

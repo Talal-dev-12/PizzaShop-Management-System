@@ -41,15 +41,14 @@ namespace pizza.Forms
         //searchCustomerForm.ShowDialog();
         //}
 
-        private void btndisplaydata_Click(object sender, EventArgs e)
+        //private void btndisplaydata_Click(object sender, EventArgs e)
+        // {
+        //   ActiveOrders displayDataForm = new ActiveOrders();
+        // displayDataForm.ShowDialog();
+        //}
+        private void BtnInventory_Click(object sender, EventArgs e)
         {
-            ActiveOrders displayDataForm = new ActiveOrders();
-            displayDataForm.ShowDialog();
-        }
-        private void btnInventory_Click(object sender, EventArgs e)
-        {
-            AddInventory form = new AddInventory();
-            form.ShowDialog();
+
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -60,6 +59,18 @@ namespace pizza.Forms
         private void btnsearchcustomer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnInventory_Click_1(object sender, EventArgs e)
+        {
+            AddInventory form = new AddInventory();
+            form.ShowDialog();
+        }
+
+        private void btnDisplayInventory_Click(object sender, EventArgs e)
+        {
+            DisplayInventory displayInventory = new DisplayInventory();
+            displayInventory.ShowDialog();
         }
     }
 }

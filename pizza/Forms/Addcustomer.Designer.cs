@@ -187,10 +187,10 @@
             // 
             // btnback
             // 
-            btnback.Location = new Point(2, 461);
+            btnback.Location = new Point(11, 448);
             btnback.Margin = new Padding(2);
             btnback.Name = "btnback";
-            btnback.Size = new Size(76, 28);
+            btnback.Size = new Size(109, 37);
             btnback.TabIndex = 17;
             btnback.Text = "Back";
             btnback.UseVisualStyleBackColor = true;
@@ -198,12 +198,12 @@
             // 
             // btnexit
             // 
-            btnexit.Location = new Point(984, 461);
+            btnexit.Location = new Point(940, 448);
             btnexit.Margin = new Padding(2);
             btnexit.Name = "btnexit";
-            btnexit.Size = new Size(76, 28);
+            btnexit.Size = new Size(109, 37);
             btnexit.TabIndex = 18;
-            btnexit.Text = "Exit";
+            btnexit.Text = "Close";
             btnexit.UseVisualStyleBackColor = true;
             btnexit.Click += btnexit_Click;
             // 
@@ -212,7 +212,7 @@
             btnPlaceOrder.Location = new Point(437, 451);
             btnPlaceOrder.Margin = new Padding(2);
             btnPlaceOrder.Name = "btnPlaceOrder";
-            btnPlaceOrder.Size = new Size(143, 30);
+            btnPlaceOrder.Size = new Size(109, 37);
             btnPlaceOrder.TabIndex = 19;
             btnPlaceOrder.Text = "Add";
             btnPlaceOrder.UseVisualStyleBackColor = true;

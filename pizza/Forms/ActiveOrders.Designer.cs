@@ -50,6 +50,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1022, 297);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnClose
             // 
@@ -58,7 +59,7 @@
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(109, 37);
             btnClose.TabIndex = 3;
-            btnClose.Text = "Exit";
+            btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click_1;
             // 
@@ -72,7 +73,7 @@
             label1.Name = "label1";
             label1.Size = new Size(1044, 79);
             label1.TabIndex = 39;
-            label1.Text = "All Customer Orders";
+            label1.Text = "Active Customers Orders";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtSearch
@@ -148,7 +149,7 @@
             btnRefresh.UseVisualStyleBackColor = true;
             btnRefresh.Click += btnRefresh_Click_1;
             // 
-            // displaydata
+            // ActiveOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -165,7 +166,7 @@
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
-            Name = "displaydata";
+            Name = "ActiveOrders";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "displaydata";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

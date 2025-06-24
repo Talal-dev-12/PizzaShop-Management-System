@@ -32,49 +32,67 @@ namespace pizza.Forms
             {
                 conn.Open();
                 string query = @"
-                    SELECT o.OID, o.CustomerName, o.PhoneNo,
-                        CONCAT(pf.FlavorName, ' (', ps.SizeName, ')') AS Pizza,
-                        CONCAT(s.SaladName, ' (', sz.SizeName, ')') AS Salad,
-                        CONCAT(di.DrinkName, ' (', ds.VolumeDescription, ')') AS Drink,
-                        CONCAT(o.GovtTaxPercentage, '%') AS Tax,
-                        o.TotalAmount AS Total,
-                        o.OrderStatus AS Status,
-                        o.DeliveredAt AS DeliveredTime
-                    FROM Orders o
-                    LEFT JOIN OrderPizzas op ON o.OID = op.OID
-                    LEFT JOIN PizzaFlavors pf ON op.PizzaID = pf.PizzaID
-                    LEFT JOIN PizzaSizes ps ON op.SizeID = ps.SizeID
-                    LEFT JOIN OrderSalads os ON o.OID = os.OID
-                    LEFT JOIN Salads s ON os.SaladID = s.SaladID
-                    LEFT JOIN SaladSizes sz ON os.SizeID = sz.SizeID
-                    LEFT JOIN OrderDrinks od ON o.OID = od.OID
-                    LEFT JOIN DrinkItems di ON od.DrinkID = di.DrinkID
-                    LEFT JOIN DrinkSizes ds ON od.DrinkSizeID = ds.DrinkSizeID
-                    WHERE (@filter = '' OR o.OID = @oid OR o.CustomerName LIKE @name)
-                ";
+            SELECT 
+                o.OID,
+                o.CustomerName,
+                o.PhoneNo,
+                GROUP_CONCAT(DISTINCT CONCAT(pf.FlavorName, ' (', ps.SizeName, ')') SEPARATOR ', ') AS Pizza,
+                GROUP_CONCAT(DISTINCT CONCAT(s.SaladName, ' (', sz.SizeName, ')') SEPARATOR ', ') AS Salad,
+                GROUP_CONCAT(DISTINCT CONCAT(di.DrinkName, ' (', ds.VolumeDescription, ')') SEPARATOR ', ') AS Drink,
+                CONCAT(o.GovtTaxPercentage, '%') AS Tax,
+                o.TotalAmount AS Total,
+                o.OrderStatus AS Status,
+                o.DeliveredAt
+            FROM Orders o
+            LEFT JOIN OrderPizzas op ON o.OID = op.OID
+            LEFT JOIN PizzaFlavors pf ON op.PizzaID = pf.PizzaID
+            LEFT JOIN PizzaSizes ps ON op.SizeID = ps.SizeID
+            LEFT JOIN OrderSalads os ON o.OID = os.OID
+            LEFT JOIN Salads s ON os.SaladID = s.SaladID
+            LEFT JOIN SaladSizes sz ON os.SizeID = sz.SizeID
+            LEFT JOIN OrderDrinks od ON o.OID = od.OID
+            LEFT JOIN DrinkItems di ON od.DrinkID = di.DrinkID
+            LEFT JOIN DrinkSizes ds ON od.DrinkSizeID = ds.DrinkSizeID
+            WHERE o.IsArchived = 0
+              AND o.OrderStatus != 'Delivered'
+              AND (
+                    o.OID = @oid OR
+                    o.CustomerName LIKE @name OR
+                    o.PhoneNo LIKE @name
+              )
+            GROUP BY o.OID
+            ORDER BY o.OID DESC;
+        ";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@filter", filter);
                 if (int.TryParse(filter, out int id))
                 {
                     cmd.Parameters.AddWithValue("@oid", id);
                 }
                 else
                 {
-                    cmd.Parameters.AddWithValue("@oid", -1); // Ensures no OID matches when filter is not a number
+                    cmd.Parameters.AddWithValue("@oid", -1); // impossible ID
                 }
+
                 cmd.Parameters.AddWithValue("@name", "%" + filter + "%");
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+
                 dataGridView1.DataSource = dt;
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.ReadOnly = true;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No matching orders found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -137,6 +155,11 @@ namespace pizza.Forms
         {
             string keyword = txtSearch.Text.Trim();
             LoadAllOrders(keyword);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

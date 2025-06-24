@@ -91,10 +91,10 @@ namespace pizza
             // 
             // btnexit
             // 
-            btnexit.Location = new Point(479, 276);
+            btnexit.Location = new Point(438, 268);
             btnexit.Margin = new Padding(2);
             btnexit.Name = "btnexit";
-            btnexit.Size = new Size(66, 27);
+            btnexit.Size = new Size(109, 37);
             btnexit.TabIndex = 6;
             btnexit.Text = "Exit";
             btnexit.UseVisualStyleBackColor = true;

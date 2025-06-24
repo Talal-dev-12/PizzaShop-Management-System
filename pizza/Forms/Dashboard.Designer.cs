@@ -81,23 +81,23 @@
             // 
             // btndeletecustomer
             // 
-            btndeletecustomer.Location = new Point(11, 76);
+            btndeletecustomer.Location = new Point(11, 106);
             btndeletecustomer.Margin = new Padding(2);
             btndeletecustomer.Name = "btndeletecustomer";
             btndeletecustomer.Size = new Size(135, 26);
             btndeletecustomer.TabIndex = 4;
-            btndeletecustomer.Text = "All Customer Data";
+            btndeletecustomer.Text = "All Customer";
             btndeletecustomer.UseVisualStyleBackColor = true;
             btndeletecustomer.Click += btndeletecustomer_Click;
             // 
             // btndisplaydata
             // 
-            btndisplaydata.Location = new Point(11, 136);
+            btndisplaydata.Location = new Point(11, 76);
             btndisplaydata.Margin = new Padding(2);
             btndisplaydata.Name = "btndisplaydata";
             btndisplaydata.Size = new Size(135, 26);
             btndisplaydata.TabIndex = 6;
-            btndisplaydata.Text = "Active Customer Data";
+            btndisplaydata.Text = "Active Customer";
             btndisplaydata.UseVisualStyleBackColor = true;
             btndisplaydata.Click += btndisplaydata_Click;
             // 
@@ -130,7 +130,7 @@
             // 
             // btnDisplayInventory
             // 
-            btnDisplayInventory.Location = new Point(11, 196);
+            btnDisplayInventory.Location = new Point(11, 271);
             btnDisplayInventory.Margin = new Padding(2);
             btnDisplayInventory.Name = "btnDisplayInventory";
             btnDisplayInventory.Size = new Size(135, 26);
@@ -141,7 +141,7 @@
             // 
             // btnInventory
             // 
-            btnInventory.Location = new Point(11, 166);
+            btnInventory.Location = new Point(11, 241);
             btnInventory.Margin = new Padding(2);
             btnInventory.Name = "btnInventory";
             btnInventory.Size = new Size(135, 26);
@@ -157,7 +157,7 @@
             pictureBox1.Location = new Point(169, 68);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(875, 385);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 

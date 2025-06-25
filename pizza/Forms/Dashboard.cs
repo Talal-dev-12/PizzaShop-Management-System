@@ -66,11 +66,5 @@ namespace pizza.Forms
             AddInventory form = new AddInventory();
             form.ShowDialog();
         }
-
-        private void btnDisplayInventory_Click(object sender, EventArgs e)
-        {
-            DisplayInventory displayInventory = new DisplayInventory();
-            displayInventory.ShowDialog();
-        }
     }
 }

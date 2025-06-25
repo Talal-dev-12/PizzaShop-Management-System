@@ -36,7 +36,6 @@
             btndisplaydata = new Button();
             btnexit = new Button();
             panel1 = new Panel();
-            btnDisplayInventory = new Button();
             BtnInventory = new Button();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
@@ -116,7 +115,6 @@
             panel1.BackColor = SystemColors.ButtonShadow;
             panel1.Controls.Add(btnexit);
             panel1.Controls.Add(btnaddcustomer);
-            panel1.Controls.Add(btnDisplayInventory);
             panel1.Controls.Add(BtnInventory);
             panel1.Controls.Add(btndisplaydata);
             panel1.Controls.Add(btnupdatecustomer);
@@ -127,17 +125,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(314, 821);
             panel1.TabIndex = 9;
-            // 
-            // btnDisplayInventory
-            // 
-            btnDisplayInventory.Location = new Point(20, 353);
-            btnDisplayInventory.Margin = new Padding(4);
-            btnDisplayInventory.Name = "btnDisplayInventory";
-            btnDisplayInventory.Size = new Size(251, 55);
-            btnDisplayInventory.TabIndex = 6;
-            btnDisplayInventory.Text = "DISPLAY INVENTORY";
-            btnDisplayInventory.UseVisualStyleBackColor = true;
-            btnDisplayInventory.Click += btnDisplayInventory_Click;
             // 
             // BtnInventory
             // 
@@ -157,7 +144,7 @@
             pictureBox1.Location = new Point(314, 145);
             pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(875, 385);
+            pictureBox1.Size = new Size(1625, 821);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -190,7 +177,6 @@
         private Button btnexit;
         private Panel panel1;
         private PictureBox pictureBox1;
-        private Button btnDisplayInventory;
         private Button BtnInventory;
     }
 }

@@ -53,6 +53,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            txtSearchInventory = new TextBox();
+            BtnClose = new Button();
+            btnRefreshInventory = new Button();
+            btnSearchInventory = new Button();
             ((System.ComponentModel.ISupportInitialize)gridPizzaInventory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridDrinkInventory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridSaladInventory).BeginInit();
@@ -74,17 +78,17 @@
             // cmbPizzaFlavor
             // 
             cmbPizzaFlavor.FormattingEnabled = true;
-            cmbPizzaFlavor.Location = new Point(36, 343);
+            cmbPizzaFlavor.Location = new Point(115, 343);
             cmbPizzaFlavor.Name = "cmbPizzaFlavor";
-            cmbPizzaFlavor.Size = new Size(242, 40);
+            cmbPizzaFlavor.Size = new Size(306, 40);
             cmbPizzaFlavor.TabIndex = 2;
             // 
             // cmbPizzaSize
             // 
             cmbPizzaSize.FormattingEnabled = true;
-            cmbPizzaSize.Location = new Point(36, 400);
+            cmbPizzaSize.Location = new Point(115, 400);
             cmbPizzaSize.Name = "cmbPizzaSize";
-            cmbPizzaSize.Size = new Size(242, 40);
+            cmbPizzaSize.Size = new Size(306, 40);
             cmbPizzaSize.TabIndex = 3;
             // 
             // btnUpdatePizzaStock
@@ -125,16 +129,16 @@
             // 
             // txtPizzaQty
             // 
-            txtPizzaQty.Location = new Point(36, 287);
+            txtPizzaQty.Location = new Point(115, 287);
             txtPizzaQty.Name = "txtPizzaQty";
-            txtPizzaQty.Size = new Size(242, 39);
+            txtPizzaQty.Size = new Size(306, 39);
             txtPizzaQty.TabIndex = 8;
             // 
             // txtDrinkQty
             // 
-            txtDrinkQty.Location = new Point(711, 287);
+            txtDrinkQty.Location = new Point(778, 287);
             txtDrinkQty.Name = "txtDrinkQty";
-            txtDrinkQty.Size = new Size(242, 39);
+            txtDrinkQty.Size = new Size(340, 39);
             txtDrinkQty.TabIndex = 15;
             // 
             // gridDrinkInventory
@@ -143,7 +147,7 @@
             gridDrinkInventory.Location = new Point(701, 647);
             gridDrinkInventory.Name = "gridDrinkInventory";
             gridDrinkInventory.RowHeadersWidth = 82;
-            gridDrinkInventory.Size = new Size(480, 300);
+            gridDrinkInventory.Size = new Size(475, 300);
             gridDrinkInventory.TabIndex = 14;
             // 
             // btnAddDrinkStock
@@ -152,7 +156,7 @@
             btnAddDrinkStock.Name = "btnAddDrinkStock";
             btnAddDrinkStock.Size = new Size(150, 46);
             btnAddDrinkStock.TabIndex = 13;
-            btnAddDrinkStock.Text = "button4";
+            btnAddDrinkStock.Text = "Add";
             btnAddDrinkStock.UseVisualStyleBackColor = true;
             // 
             // btnDeleteDrinkStock
@@ -161,7 +165,7 @@
             btnDeleteDrinkStock.Name = "btnDeleteDrinkStock";
             btnDeleteDrinkStock.Size = new Size(150, 46);
             btnDeleteDrinkStock.TabIndex = 12;
-            btnDeleteDrinkStock.Text = "button5";
+            btnDeleteDrinkStock.Text = "Delete";
             btnDeleteDrinkStock.UseVisualStyleBackColor = true;
             // 
             // btnUpdateDrinkStock
@@ -170,30 +174,30 @@
             btnUpdateDrinkStock.Name = "btnUpdateDrinkStock";
             btnUpdateDrinkStock.Size = new Size(150, 46);
             btnUpdateDrinkStock.TabIndex = 11;
-            btnUpdateDrinkStock.Text = "button6";
+            btnUpdateDrinkStock.Text = "Update";
             btnUpdateDrinkStock.UseVisualStyleBackColor = true;
             // 
             // cmbDrinkSize
             // 
             cmbDrinkSize.FormattingEnabled = true;
-            cmbDrinkSize.Location = new Point(711, 400);
+            cmbDrinkSize.Location = new Point(778, 400);
             cmbDrinkSize.Name = "cmbDrinkSize";
-            cmbDrinkSize.Size = new Size(242, 40);
+            cmbDrinkSize.Size = new Size(340, 40);
             cmbDrinkSize.TabIndex = 10;
             // 
             // cmbDrinkItem
             // 
             cmbDrinkItem.FormattingEnabled = true;
-            cmbDrinkItem.Location = new Point(711, 343);
+            cmbDrinkItem.Location = new Point(778, 343);
             cmbDrinkItem.Name = "cmbDrinkItem";
-            cmbDrinkItem.Size = new Size(242, 40);
+            cmbDrinkItem.Size = new Size(340, 40);
             cmbDrinkItem.TabIndex = 9;
             // 
             // txtSaladQty
             // 
-            txtSaladQty.Location = new Point(1418, 287);
+            txtSaladQty.Location = new Point(1438, 287);
             txtSaladQty.Name = "txtSaladQty";
-            txtSaladQty.Size = new Size(242, 39);
+            txtSaladQty.Size = new Size(318, 39);
             txtSaladQty.TabIndex = 22;
             // 
             // gridSaladInventory
@@ -211,7 +215,7 @@
             btnAddSaladStock.Name = "btnAddSaladStock";
             btnAddSaladStock.Size = new Size(150, 46);
             btnAddSaladStock.TabIndex = 20;
-            btnAddSaladStock.Text = "button7";
+            btnAddSaladStock.Text = "Add";
             btnAddSaladStock.UseVisualStyleBackColor = true;
             // 
             // btnDeleteSaladStock
@@ -220,39 +224,39 @@
             btnDeleteSaladStock.Name = "btnDeleteSaladStock";
             btnDeleteSaladStock.Size = new Size(150, 46);
             btnDeleteSaladStock.TabIndex = 19;
-            btnDeleteSaladStock.Text = "button8";
+            btnDeleteSaladStock.Text = "Delete";
             btnDeleteSaladStock.UseVisualStyleBackColor = true;
             // 
             // btnUpdateSaladStock
             // 
-            btnUpdateSaladStock.Location = new Point(1577, 595);
+            btnUpdateSaladStock.Location = new Point(1570, 595);
             btnUpdateSaladStock.Name = "btnUpdateSaladStock";
             btnUpdateSaladStock.Size = new Size(150, 46);
             btnUpdateSaladStock.TabIndex = 18;
-            btnUpdateSaladStock.Text = "button9";
+            btnUpdateSaladStock.Text = "Update";
             btnUpdateSaladStock.UseVisualStyleBackColor = true;
             // 
             // cmbSaladSize
             // 
             cmbSaladSize.FormattingEnabled = true;
-            cmbSaladSize.Location = new Point(1418, 400);
+            cmbSaladSize.Location = new Point(1438, 400);
             cmbSaladSize.Name = "cmbSaladSize";
-            cmbSaladSize.Size = new Size(242, 40);
+            cmbSaladSize.Size = new Size(318, 40);
             cmbSaladSize.TabIndex = 17;
             // 
             // cmbSaladItem
             // 
             cmbSaladItem.FormattingEnabled = true;
-            cmbSaladItem.Location = new Point(1418, 343);
+            cmbSaladItem.Location = new Point(1438, 343);
             cmbSaladItem.Name = "cmbSaladItem";
-            cmbSaladItem.Size = new Size(242, 40);
+            cmbSaladItem.Size = new Size(318, 40);
             cmbSaladItem.TabIndex = 16;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label2.Location = new Point(96, 194);
+            label2.Location = new Point(165, 205);
             label2.Name = "label2";
             label2.Size = new Size(182, 45);
             label2.TabIndex = 23;
@@ -262,7 +266,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label3.Location = new Point(766, 194);
+            label3.Location = new Point(833, 194);
             label3.Name = "label3";
             label3.Size = new Size(187, 45);
             label3.TabIndex = 23;
@@ -272,17 +276,62 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label4.Location = new Point(1474, 194);
+            label4.Location = new Point(1498, 194);
             label4.Name = "label4";
             label4.Size = new Size(186, 45);
             label4.TabIndex = 23;
             label4.Text = "Salad Stock";
+            // 
+            // txtSearchInventory
+            // 
+            txtSearchInventory.Location = new Point(222, 113);
+            txtSearchInventory.Name = "txtSearchInventory";
+            txtSearchInventory.Size = new Size(320, 39);
+            txtSearchInventory.TabIndex = 24;
+            // 
+            // BtnClose
+            // 
+            BtnClose.AutoSize = true;
+            BtnClose.BackColor = SystemColors.ActiveBorder;
+            BtnClose.BackgroundImageLayout = ImageLayout.None;
+            BtnClose.FlatAppearance.BorderSize = 0;
+            BtnClose.FlatStyle = FlatStyle.Flat;
+            BtnClose.Font = new Font("Segoe UI", 16.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnClose.Location = new Point(1879, 0);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(60, 69);
+            BtnClose.TabIndex = 25;
+            BtnClose.Text = "X";
+            BtnClose.UseVisualStyleBackColor = false;
+            BtnClose.Click += BtnClose_Click;
+            // 
+            // btnRefreshInventory
+            // 
+            btnRefreshInventory.Location = new Point(481, 269);
+            btnRefreshInventory.Name = "btnRefreshInventory";
+            btnRefreshInventory.Size = new Size(150, 46);
+            btnRefreshInventory.TabIndex = 26;
+            btnRefreshInventory.Text = "Refresh";
+            btnRefreshInventory.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchInventory
+            // 
+            btnSearchInventory.Location = new Point(481, 343);
+            btnSearchInventory.Name = "btnSearchInventory";
+            btnSearchInventory.Size = new Size(150, 46);
+            btnSearchInventory.TabIndex = 26;
+            btnSearchInventory.Text = "Search ";
+            btnSearchInventory.UseVisualStyleBackColor = true;
             // 
             // AddInventory
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1939, 966);
+            Controls.Add(BtnClose);
+            Controls.Add(btnSearchInventory);
+            Controls.Add(btnRefreshInventory);
+            Controls.Add(txtSearchInventory);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -309,7 +358,7 @@
             Controls.Add(cmbPizzaFlavor);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "AddInventory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddInventory";
@@ -347,5 +396,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private TextBox txtSearchInventory;
+        private Button BtnClose;
+        private Button btnRefreshInventory;
+        private Button btnSearchInventory;
     }
 }

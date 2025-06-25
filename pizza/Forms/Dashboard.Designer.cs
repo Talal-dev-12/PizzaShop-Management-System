@@ -86,7 +86,7 @@
             btndeletecustomer.Name = "btndeletecustomer";
             btndeletecustomer.Size = new Size(251, 55);
             btndeletecustomer.TabIndex = 4;
-            btndeletecustomer.Text = "All Customer";
+            btndeletecustomer.Text = "All Customer Data";
             btndeletecustomer.UseVisualStyleBackColor = true;
             btndeletecustomer.Click += btndeletecustomer_Click;
             // 
@@ -157,8 +157,8 @@
             pictureBox1.Location = new Point(314, 145);
             pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1625, 821);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Size = new Size(875, 385);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
